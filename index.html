@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<!-- leafletjs  -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<h1>Leafletjs</h1>
+
+<!-- image view -->
+<img src="/foto/B-I-1.png" width="200" height="200">
+
+<!-- map view -->
+<div id="map" style="width: 600px; height: 400px;"></div>
+
+<script>
+  var map = L.map('map').setView([51.505, -0.09], 13);
+
+  L.tileLayer('', {
+    maxZoom:22,
+  }).addTo(map);
+
+  L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
+
+
+</script>
+
+  
+</body>
+</html>
